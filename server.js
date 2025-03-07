@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
-// Rutas
+// Rutas dos 
 //senosres y lecturas
 app.use('/sensors', sensorRoutes);
 app.use('/readings', readingRoutes);
