@@ -8,15 +8,16 @@ const readingRoutes = require('./routes/readings.routes');
 const app = express();
 const port = 3000;
 
-// Conectar a la base de datos
+// Conectar a la base de Mongo
 connectDB();
 
-// Middleware
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
 // Rutas
+//senosres y lecturas
 app.use('/sensors', sensorRoutes);
 app.use('/readings', readingRoutes);
 
