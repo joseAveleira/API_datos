@@ -1,19 +1,19 @@
 {
-  "name": "api_datos",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "_id": "679cd34c527db7f2fa497143",
+  "sensorId": "65f7a2b3c9d8e01234567890",
+  "value": 22.5,
+  "unit": "°C",
+  "timestamp": "2025-02-01T10:30:00.000Z",
   "dependencies": {
-    "bcrypt": "^5.1.1",
+    "aedes": "^0.51.3",
+    "bcryptjs": "^3.0.2",
+    "coap": "^1.4.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
     "moment": "^2.30.1",
-    "mongoose": "^8.11.0"
+    "mongoose": "^8.10.1",
+    "ws": "^8.18.1"
   }
 }

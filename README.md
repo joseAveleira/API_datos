@@ -38,6 +38,17 @@ Este proyecto implementa una API para administrar sensores IoT y almacenar sus l
 | POST | `/readings` | Crear una nueva lectura |
 | DELETE | `/readings/:sensorId` | Eliminar todas las lecturas de un sensor |
 
+## Configuración del Entorno
+
+Es necesario crear un archivo `.env` en la raíz del proyecto con las siguientes variables de entorno:
+
+```env
+MONGO_CREDENTIALS='mongodb://TU_NOMBRE:TUCONTRASEÑA@localhost:27017/sensores?authSource=admin'
+JWT_SECRET=tu_secreto_jwt_aqui
+```
+
+**Nota:** Reemplaza `TU_NOMBRE`, `TUCONTRASEÑA` y `tu_secreto_jwt_aqui` con tus credenciales y secreto correspondientes.
+
 ## Ruta de prueba
 
 La API incluye una ruta de prueba para verificar que el servicio está funcionando correctamente:

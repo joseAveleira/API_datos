@@ -1,7 +1,6 @@
-const Sensor = require('../models/sensor');
+const Sensor = require('../models/Sensor');
 
 const getAllSensors = async (req, res) => {
-    console.log('getAllSensors');
     try {
         const sensors = await Sensor.find();
         res.status(200).json(sensors);
@@ -31,8 +30,10 @@ const getSensorById = async (req, res) => {
 };
 
 const updateSensor = async (req, res) => {
+    
     try {
         const sensor = await Sensor.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        console.log(sensor);
         if (!sensor) return res.status(404).json({ msg: 'Sensor no encontrado' });
         res.json({ msg: 'Sensor actualizado correctamente', sensor });
     } catch (err) {
@@ -50,5 +51,4 @@ const deleteSensor = async (req, res) => {
     }
 };
 
-module.exports = { getAllSensors, createSensor,
- getSensorById, updateSensor, deleteSensor };
+module.exports = { getAllSensors, createSensor, getSensorById, updateSensor, deleteSensor };

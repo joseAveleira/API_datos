@@ -1,5 +1,6 @@
-const Reading = require("../models/reading");
+const Reading = require("../models/Reading");
 const moment = require("moment");
+
 
 // Obtener todas las lecturas de un sensor
 const getReadingsBySensor = async (req, res) => {
@@ -54,7 +55,6 @@ const createReading = async (req, res) => {
       .json({ msg: "Error al guardar la lectura", error: err.message });
   }
 };
- 
 
 // Eliminar todas las lecturas de un sensor
 const deleteReadingsBySensor = async (req, res) => {
@@ -117,6 +117,7 @@ const getReadingsByTimeRange = async (req, res) => {
     }
 
 };
+
 module.exports = {
   getReadingsBySensor,
   createReading,
